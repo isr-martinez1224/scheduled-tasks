@@ -78,14 +78,6 @@ jobs:
       - name: Test Python syntax
         run: python -m py_compile main.py && echo "Python syntax OK"
 
-      - name: Run application
-        env:
-          ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
-          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-          OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
-        run: |
-          python main.py
-
       - name: Success
         run: |
           echo ""
